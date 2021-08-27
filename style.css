@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #D4E1E5;
+    padding: 0px 17.3% 0px 14.5%;
+    position: relative;
+}
+:root{
+    --color-red: #EB434D;
+}
+button.action{
+    background: #EDEDED;
+    color: #b1b1b1;
+    border: none;
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.action:hover{
+    border: 2px solid #A6DBEC;
+}
+.favorite>svg > path{
+    width: 20px;
+    height: 20px;
+    fill: var(--color-red);
+}
+h1{
+    text-align: center;
+    margin-top: 130px;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 66px;
+    letter-spacing: 2.5px;
+}
+.bookList{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 47px;
+    grid-row-gap: 29px;
+}
+.bookLi{
+    box-sizing:border-box;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 90% auto;
+    border-radius: 10px;
+    list-style-type: none;
+    max-width: 440px;
+    min-height: 188px;
+    background: #FFFFFF;
+}
+.name{
+    font-size: 20px;
+    margin: 0px 50px 35px 0px;
+}
+.author{
+    font-size: 16px;
+}
+.button__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.modal{
+    position:fixed; 
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(110, 154, 220);
+    background-color: rgba(144, 162, 221, 0.4);
+}
+.modal__container{
+    background: white;
+    width: 35%;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 20px;
+}
+.modal__container p{
+    font-size: 20px;
+}
+@media (max-width: 1024px){
+    body{
+        padding: 0px 20% 0px 20%;
+    }
+    .bookList{
+        grid-template-columns: 1fr;
+    }
+}
